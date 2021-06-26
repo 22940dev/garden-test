@@ -8,3 +8,23 @@ body {
   background-color: #121212;
   color: #fff;
 }
+
+::selection {
+  background-color: greenyellow;
+  color: #121212;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+sup {
+  font-size: large;
+  vertical-align: top;
+  margin-left: 8px;
+}
+
+.italic {
+	font-style: italic;
+}
