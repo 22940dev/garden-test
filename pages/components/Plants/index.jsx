@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
 import SinglePlant from '../SinglePlant';
+import { PlantsContainer } from './styles';
 
 const Plants = () => {
-    return <SinglePlant/>
-}
+  return (
+    <PlantsContainer>
+      <SinglePlant />
+    </PlantsContainer>
+  );
+};
 
-export default Plants
+export default Plants;
