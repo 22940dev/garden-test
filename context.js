@@ -7,11 +7,21 @@ const AppContext = React.createContext();
 // pass down children since whole app will be wrapped inside the provider, otherwise children components won't show up
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [plants, setPlants] = useState([]);
-  const [selectedPlant, setSelectedPlant] = useState(null);
+  const [flowers, setFlowers] = useState(plants);
+  const [selectedFlower, setSelectedFlower] = useState(null);
 
-  const openModal = () => {
+  // useEffect(() => {
+  //   setFlowers(plants);
+  // }, []);
+
+  const pickFlower = (plant) => {
     setIsModalOpen(true);
+    setSelectedFlower(plant);
+  };
+
+  const openModal = (plant) => {
+    setIsModalOpen(true);
+    setSelectedFlower(plant);
     console.log('it works');
   };
 
@@ -24,11 +34,12 @@ const AppProvider = ({ children }) => {
     // pass in state values b/c depending on state values we will toggle modal and sidebar
     <AppContext.Provider
       value={{
-        plants,
-        selectedPlant,
+        flowers,
+        selectedFlower,
         isModalOpen,
         openModal,
         closeModal,
+        pickFlower,
       }}
     >
       {children}
