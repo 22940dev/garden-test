@@ -1,7 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from '../../../context';
 import { Overlay, DetailsContainer } from './styles';
-import utils from '../../../styles/utils.module.scss';
 
 const DetailsModal = ({ plant }) => {
   const { isModalOpen, closeModal } = useGlobalContext();

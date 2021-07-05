@@ -11,7 +11,7 @@ import {
 import { useGlobalContext } from '../../../context';
 
 const SinglePlant = () => {
-  const { isModalOpen, openModal } = useGlobalContext();
+  const { openModal } = useGlobalContext();
   return (
     <>
       {plants.map((plant) => {
