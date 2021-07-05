@@ -22,7 +22,7 @@ const AppProvider = ({ children }) => {
   const openModal = (plant) => {
     setIsModalOpen(true);
     setSelectedFlower(plant);
-    console.log('it works');
+    console.log(flowers);
   };
 
   const closeModal = () => {

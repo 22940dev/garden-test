@@ -11,12 +11,12 @@ import {
 } from './styles';
 
 const DetailsModal = ({ plant }) => {
-  const { isModalOpen, closeModal, flowers } = useGlobalContext();
+  const { isModalOpen, closeModal } = useGlobalContext();
   return (
     <Overlay $isModalOpen={isModalOpen}>
       <DetailsContainer>
         <ModalHeader>
-          <PlantName>Plant name</PlantName>
+          <PlantName>Plant Name</PlantName>
           <BotanicalName>Botanical name</BotanicalName>
         </ModalHeader>
         <PlantDetails>
