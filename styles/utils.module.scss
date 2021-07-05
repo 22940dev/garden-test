@@ -2,6 +2,14 @@
   font-style: italic;
 }
 
+.displaynone {
+  display: none;
+}
+
+.showModal {
+  display: block;
+}
+
 /* DESKTOP */
 @media (min-width: 800px) {
   /* desktop styles in here */

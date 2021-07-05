@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import variables from '../../../styles/variables.module.scss';
 
+export const Article = styled.article`
+  border-bottom: 1px solid gray;
+  @media (min-width: 800px) {
+    border: none;
+  }
+`;
+
 // Plant Name
 export const Plant = styled.h3`
   font-family: 'DM Mono';
@@ -34,5 +41,9 @@ export const BotanicalName = styled.h4`
 
 export const PlantBlurb = styled.p`
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 800px) {
+    margin-bottom: 1rem;
+  }
 `;

@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/utils.module.scss';
 import Plants from './components/Plants';
 import { MainContainer } from '../styles/styles';
 import HeaderContainer from './components/Header';
+import DetailsModal from './components/PlantDetails';
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
+      <DetailsModal />
       <MainContainer>
         <HeaderContainer />
         <Plants />
