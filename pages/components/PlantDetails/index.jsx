@@ -10,7 +10,7 @@ import {
   BotanicalName,
 } from './styles';
 
-const DetailsModal = ({ plant }) => {
+const DetailsModal = () => {
   const { isModalOpen, closeModal } = useGlobalContext();
   return (
     <Overlay $isModalOpen={isModalOpen}>

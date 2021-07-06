@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import plants from '../../../data';
 import {
   Article,
   Plant,
@@ -11,15 +10,15 @@ import {
 import { useGlobalContext } from '../../../context';
 
 const SinglePlant = () => {
-  const { openModal } = useGlobalContext();
+  const { openModal, flowers } = useGlobalContext();
   return (
     <>
-      {plants.map((plant) => {
-        const { id, name, blurb, botanical } = plant;
+      {flowers.map((flower) => {
+        const { id, name, blurb, botanical } = flower;
         return (
           <Article key={id}>
             <Plant>
-              <PlantLink onClick={openModal}>{name}</PlantLink>
+              <PlantLink onClick={() => openModal(flower)}>{name}</PlantLink>
               <Sup>{id}</Sup>
             </Plant>
             <BotanicalName>{botanical}</BotanicalName>

@@ -10,18 +10,9 @@ const AppProvider = ({ children }) => {
   const [flowers, setFlowers] = useState(plants);
   const [selectedFlower, setSelectedFlower] = useState(null);
 
-  // useEffect(() => {
-  //   setFlowers(plants);
-  // }, []);
-
-  const pickFlower = (plant) => {
+  const openModal = (flower) => {
+    setSelectedFlower(flower);
     setIsModalOpen(true);
-    setSelectedFlower(plant);
-  };
-
-  const openModal = (plant) => {
-    setIsModalOpen(true);
-    setSelectedFlower(plant);
     console.log(flowers);
   };
 
@@ -39,7 +30,6 @@ const AppProvider = ({ children }) => {
         isModalOpen,
         openModal,
         closeModal,
-        pickFlower,
       }}
     >
       {children}
